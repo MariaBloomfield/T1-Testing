@@ -11,6 +11,7 @@ class TestAssertTrueRule(LinterTest):
                             x = 2
                             self.assertTrue(True)""")
         expectedWarnings = [Warning('AssertTrueWarning', 3, 'useless assert true detected')]
+        
         self.asssertWarning(result, expectedWarnings)
 
     def test_assert_true2(self):
