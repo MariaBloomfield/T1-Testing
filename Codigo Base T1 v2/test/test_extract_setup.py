@@ -20,6 +20,7 @@ class TestX(TestCase):
         y = 2
         self.assertEquals(y,x)""")
 
+        print("RESULTADO: ", result)
         self.assertAST(result,
                        """
 class TestX(TestCase):
@@ -49,6 +50,7 @@ class TestX(TestCase):
         self.assertEquals(self.p.age(),3)
     def test_y(self):
         self.assertEquals(self.p.name(),"Juan")""")
+        print(result)
 
     def test_extract_setup_no_change(self):
         result = rewrite(ExtractSetupCommand,
