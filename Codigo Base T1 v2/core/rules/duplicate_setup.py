@@ -20,7 +20,6 @@ class DuplicatedSetupVisitor(WarningNodeVisitor):
             for j in range(i+1, cant_funciones):
                 largo = len(self.lista_funciones[i])
                 for k in range(largo):
-                    print("CONTADOR:", contador)
                     print(self.lista_funciones[i][k], self.lista_funciones[j][k])
                     if self.lista_funciones[i][k] == self.lista_funciones[j][k]:
                         contador += 1
