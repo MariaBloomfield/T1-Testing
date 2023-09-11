@@ -50,7 +50,6 @@ class TestX(TestCase):
         self.assertEquals(self.p.age(),3)
     def test_y(self):
         self.assertEquals(self.p.name(),"Juan")""")
-        print(result)
 
     def test_extract_setup_no_change(self):
         result = rewrite(ExtractSetupCommand,
@@ -62,6 +61,7 @@ class TestX(TestCase):
     def test_y(self):
         p = Person("Maria", "21")
         self.assertEquals(p.name(),"Maria")""")
+
         self.assertAST(result,
                        """
 class TestX(TestCase):
